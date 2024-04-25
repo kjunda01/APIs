@@ -22,26 +22,26 @@ Este projeto consiste em uma API CRUD desenvolvida em Django com banco de dados 
 ## Endpoints da API
 
 - **Visualizar todos os usuários na web:**
-- URL: http://127.0.0.1:8000/users/
+- URL: http://127.0.0.1/api/users/
 
 ---
 
 - **Métodos da API:**
 
 - **GET para listar todos os usuários:**
- - URL: http://127.0.0.1:8000/users/
+ - URL: [http://127.0.0.1/api/users/]
 
 - **GET para visualizar dados de um usuário específico:**
- - URL: http://127.0.0.1:8000/users/read/ID
-
+ - URL: [http://127.0.0.1:8000/users/read/ID]
+   
 - **POST para criar um novo usuário:**
- - URL: http://127.0.0.1:8000/users/create
+ - URL: [http://127.0.0.1:8000/users/create]
  - Parâmetros: dados do usuário em formato raw no corpo da requisição
 
 - **PUT para atualizar os dados de um usuário:**
- - URL: http://127.0.0.1:8000/users/update/ID
+ - URL: [http://127.0.0.1/users/update/ID]
  - Parâmetros: dados atualizados do usuário em formato raw no corpo da requisição
 
 - **DELETE para excluir um usuário:**
- - URL: http://127.0.0.1:8000/users/delete/ID
+ - URL: [http://127.0.0.1/users/delete/ID]
 
