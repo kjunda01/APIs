@@ -4,8 +4,14 @@
 set -e
 
 # Run migrations
+echo "Creating Migrations..."
 python manage.py makemigrations
-python manage.py migrate
+echo ====================================
 
-# Command to run Django with dynamic IP
+echo "Starting Migrations..."
+python manage.py migrate
+echo ====================================
+
+echo "Starting server"
 python manage.py runserver 0.0.0.0:8000
+echo ====================================
