@@ -7,7 +7,7 @@ Este projeto consiste em uma API CRUD desenvolvida em Django com banco de dados 
 
 1. Inicie os contêineres Docker:
    
-`docker compose up -d`
+<code>docker compose up -d<code>
 
 2. Para gerar usuários de teste, execute o script `gerar_usuarios.py` em um novo terminal:
 
