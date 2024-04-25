@@ -3,9 +3,10 @@ version: "3.9"
 services:
   djangoapp:
     container_name: djangoapp
+    image: minha_api:latest
     build: .
     ports:
-      - "8000:8000"
+      - "8090:8000"
     environment:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
@@ -14,7 +15,6 @@ services:
       - PG_HOST=db
     depends_on:
       - db
-
   db:
     container_name: db
     image: postgres:12
@@ -23,9 +23,19 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5432:5432"
+      - "5435:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:latest
+    container_name: meu_nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - djangoapp
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
 
 volumes:
   pgdata: {}
