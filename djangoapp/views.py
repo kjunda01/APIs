@@ -2,6 +2,14 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import User
 from .serializers import UserSerializer
+from django.shortcuts import render
+
+
+
+def minha_view(request):
+    contexto = {'chave': 'valor'}
+    return render(request, 'index.html', contexto)
+
 
 @api_view(['GET'])
 def getData(request):
@@ -9,11 +17,13 @@ def getData(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def getUser(request, pk):
     users = User.objects.get(id=pk)
     serializer = UserSerializer(users, many=False)
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 def addUser(request):
@@ -24,6 +34,7 @@ def addUser(request):
 
     return Response(serializer.data)
 
+
 @api_view(['PUT'])
 def updateUser(request, pk):
     user = User.objects.get(id=pk)
@@ -33,6 +44,7 @@ def updateUser(request, pk):
         serializer.save()
 
     return Response(serializer.data)
+
 
 @api_view(['DELETE'])
 def deleteUser(request, pk):

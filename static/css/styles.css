@@ -1,0 +1,33 @@
+/* Estilos para a visualização de dados */
+
+/* Estilos para os contêineres de usuário */
+.user-container {
+    display: inline-block;
+    width: 30vw; /* Definindo um tamanho fixo */
+    height: 30vh; /* Altura automática para acomodar o conteúdo */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Agora a borda envolverá todo o contêiner do usuário */
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que a borda seja incluída no cálculo da largura */
+    font-family: Arial, sans-serif; /* Fonte dinâmica */
+}
+
+/* Estilos para as informações do usuário */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra na imagem de perfil */
+}
+
+.user-details {
+    flex-grow: 1;
+}
+
+/* Outros estilos conforme necessário */
