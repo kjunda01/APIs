@@ -7,7 +7,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Install app dependencies
-COPY requirements.txt /app
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Bundle app source
@@ -16,7 +16,11 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run migrations and start the server
-CMD python3 manage.py makemigrations && \
-    python3 manage.py migrate && \
-    python3 manage.py runserver 0.0.0.0:8000
+# Copy django.sh script into the container
+COPY django.sh /django.sh
+
+# Grant execute permissions to the django.sh script
+RUN chmod +x /django.sh
+
+# Set the entrypoint
+ENTRYPOINT ["/django.sh"]
