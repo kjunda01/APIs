@@ -6,12 +6,11 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('', views.getData),
     path ('create', views.addUser),
     path ('read/<str:pk>', views.getUser),
     path ('update/<str:pk>', views.updateUser),
     path ('delete/<str:pk>', views.deleteUser),
-    path('todos', TemplateView.as_view(template_name='index.html')),
+    path('', TemplateView.as_view(template_name='index.html')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
