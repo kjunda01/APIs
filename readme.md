@@ -5,30 +5,35 @@ Este projeto consiste em uma API CRUD desenvolvida em Django com banco de dados 
 ## Comandos para iniciar
 
 1. Construa os contêineres Docker:
+   
 docker compose build
 
 
-2. Inicie os contêineres Docker:
+3. Inicie os contêineres Docker:
+   
 docker compose up -d
 
 
-3. Execute o os comandos para construir as tabelas no django:
+5. Execute o os comandos para construir as tabelas no django:
+   
 python3 manage.py makemigrations
 python3 manage.py migrate
 
 
-4. Execute o servidor Django manualmente:
+7. Execute o servidor Django manualmente:
+   
 python3 manage.py runserver
 Se estiver rodando em uma máquina virtual, rode com o ip da máquina, exemplo:
 python3 manage.py runserver 192.168.1.100:8000
 
 
-5. Para gerar usuários de teste, execute o script `gerar_usuarios.py` em um novo terminal:
+9. Para gerar usuários de teste, execute o script `gerar_usuarios.py` em um novo terminal:
+    
 python3 gerar_usuarios.py
 
 
 
-6. Se preferir, rode tudo em apenas 1 comando:
+11. Se preferir, rode tudo em apenas 1 comando:
 docker compose build && docker compose up -d && python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver
 
 ## Endpoints da API
