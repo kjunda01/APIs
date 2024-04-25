@@ -3,6 +3,7 @@ version: "3.9"
 services:
   djangoapp:
     container_name: djangoapp
+    image: minha_api:latest
     build: .
     ports:
       - "8090:8000"
@@ -14,7 +15,6 @@ services:
       - PG_HOST=db
     depends_on:
       - db
-
   db:
     container_name: db
     image: postgres:12
