@@ -6,3 +6,7 @@ echo ====================================
 echo "Starting Migrations..."
 python3 manage.py migrate
 echo ====================================
+
+echo "Starting Migrations..."
+python3 manage.py runserver
+echo ====================================

@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM python:3.9.7-alpine
 
 # Set unbuffered output for python
 ENV PYTHONUNBUFFERED 1
@@ -7,7 +7,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Install app dependencies
-COPY requirements.txt .
+COPY requirements.txt /app
 RUN pip install -r requirements.txt
 
 # Bundle app source
@@ -15,6 +15,8 @@ COPY . .
 
 # Expose port
 EXPOSE 8000
+
+RUN chmod -R 777 /app
 
 # entrypoint to run the django.sh file
 ENTRYPOINT ["./django.sh"]
