@@ -16,8 +16,7 @@ docker compose up -d
 
 5. Execute o os comandos para construir as tabelas no django:
    
-python3 manage.py makemigrations
-python3 manage.py migrate
+python3 manage.py makemigrations && python3 manage.py migrate
 
 
 7. Execute o servidor Django manualmente:
