@@ -13,11 +13,11 @@ docker compose up -d
 
 2. Para gerar usuários de teste, execute o script `gerar_usuarios.py` em um novo terminal:
 
-`sudo apt install python3-pip`
+```sudo apt install python3-pip```
 
-`sudo apt install faker`
+```sudo apt install faker```
 
-`python3 gerar_usuarios.py`
+```python3 gerar_usuarios.py```
 
 
 
