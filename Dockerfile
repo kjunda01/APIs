@@ -16,12 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 8000
 
-# Run migrations
-RUN python3 manage.py makemigrations
-RUN python3 manage.py migrate
-
-# Set a default environment variable for Django to use
-ENV DJANGO_HOST=0.0.0.0
-
-# Command to run Django with dynamic IP
-CMD ["python3", "manage.py", "runserver", "$DJANGO_HOST:8000"]
+# entrypoint to run the django.sh file
+ENTRYPOINT ["./django.sh"]
