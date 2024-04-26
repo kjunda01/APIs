@@ -6,7 +6,7 @@ services:
     image: minha_api:latest
     build: .
     ports:
-      - "8090:8000"
+      - "8000:8000"
     environment:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
@@ -23,7 +23,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5435:5432"
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 

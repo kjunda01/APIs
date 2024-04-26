@@ -1,0 +1,30 @@
+[
+    {
+        "model": "seuapp.user",
+        "pk": 1,
+        "fields": {
+            "creation_date": "2024-04-26T12:00:00Z",
+            "name": "João Silva",
+            "email": "joao@example.com",
+            "date_of_birth": "1990-01-01",
+            "cpf": "123.456.789-00",
+            "phone_number": "(00) 12345-6789",
+            "profession": "Engenheiro",
+            "profile_picture": "https://example.com/profile_picture.jpg"
+        }
+    },
+    {
+        "model": "seuapp.user",
+        "pk": 2,
+        "fields": {
+            "creation_date": "2024-04-26T12:00:00Z",
+            "name": "Maria Souza",
+            "email": "maria@example.com",
+            "date_of_birth": "1985-05-10",
+            "cpf": "987.654.321-00",
+            "phone_number": "(00) 98765-4321",
+            "profession": "Advogada",
+            "profile_picture": "https://example.com/profile_picture.jpg"
+        }
+    }
+]

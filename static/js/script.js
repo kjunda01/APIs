@@ -4,7 +4,7 @@ $(document).ready(function() {
     }
 
     $.ajax({
-        url: '/users/', // Endpoint para buscar os dados de todos os usuários
+        url: '/api/users', // Endpoint para buscar os dados de todos os usuários
         method: 'GET',
         success: function(response) {
             // Limpa o contêiner de dados
