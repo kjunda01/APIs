@@ -71,6 +71,7 @@ DATABASES = {
         'NAME': os.environ.get('PG_DB','postgres'),
         'PORT': os.environ.get('PG_PORT','5432'),
         'HOST': os.environ.get('PG_HOST','localhost'), # uses the container if set, otherwise it runs locally
+        'CONN_MAX_AGE': 5,  # em segundos
     }
 }
 
