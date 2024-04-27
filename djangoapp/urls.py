@@ -10,7 +10,8 @@ urlpatterns = [
     path ('read/<str:pk>', views.getUser),
     path ('update/<str:pk>', views.updateUser),
     path ('delete/<str:pk>', views.deleteUser),
-    path ('', TemplateView.as_view(template_name='index.html')),
+    path ('', views.getData),
+    #path ('', TemplateView.as_view(template_name='index.html')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
